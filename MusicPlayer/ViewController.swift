@@ -17,27 +17,49 @@ class ViewController: UIViewController {
     @IBOutlet weak var fadeValueLabel: UILabel!
     @IBOutlet weak var fadeSlider: UISlider!
     
-    let trackNames = [
-    "Алла Пугачёва - Позови меня с собой",
-    "The Qemists - Run You"
+    var player: AVPlayer!
+    var playerQueue = [
+        Song(name: "The Qemists - Run You"),
+        Song(name: "Алла Пугачёва - Позови меня с собой")
     ]
     
-    func changeTrack() {
-    
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        albumCover.image = UIImage(named: trackNames[1])
-        trackTitle.text = trackNames[1]
+        albumCover.image = UIImage(named: playerQueue.first?.name ?? "")
+        trackTitle.text = playerQueue.first?.name ?? ""
+        player = playerQueue.first?.fetchSong()
         fadeValueLabel.text = "\(fadeSlider.value)"
-//
-//        let gradientLayer = CAGradientLayer()
-//        gradientLayer.frame = view.bounds
-//        gradientLayer.colors = [
-//            UIColor.systemGreen.cgColor,
-//            UIColor.systemBlue.cgColor
-//        ]
-//        view.layer.addSublayer(gradientLayer)
+        
+    }
+    
+    @IBAction func playButtonPressed() {
+        if player.timeControlStatus  == .playing {
+            playButton.setImage(UIImage(systemName: "play.circle.fill"), for: .normal)
+            player.pause()
+        } else {
+            playButton.setImage(UIImage(systemName: "pause.circle.fill"), for: .normal)
+            player.play()
+        }
+    }
+    @IBAction func changeSong() {
+        if trackTitle.text == playerQueue.first?.name {
+            player = playerQueue.last?.fetchSong()
+            albumCover.image = UIImage(named: playerQueue.last?.name ?? "")
+            trackTitle.text = playerQueue.last?.name ?? ""
+            if playButton.currentImage == UIImage(systemName: "pause.circle.fill") {
+                player.play()
+            }
+            
+        } else {
+            player = playerQueue.first?.fetchSong()
+            albumCover.image = UIImage(named: playerQueue.first?.name ?? "")
+            trackTitle.text = playerQueue.first?.name ?? ""
+            if playButton.currentImage == UIImage(systemName: "pause.circle.fill") {
+                player.play()
+            }
+        }
+        
+        
     }
     
     
