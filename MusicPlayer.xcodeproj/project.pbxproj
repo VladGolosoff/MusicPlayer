@@ -17,6 +17,7 @@
 		144209BD27BBEE1B00D0341B /* The Qemists - Run You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 144209BC27BBEE1B00D0341B /* The Qemists - Run You.mp3 */; };
 		1479D54227BC140F004A5D76 /* GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479D54127BC140F004A5D76 /* GradientLayer.swift */; };
 		1479D54427BC31E9004A5D76 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1479D54327BC31E9004A5D76 /* Songs.swift */; };
+		14C7819427BCF998004E24BE /* AVPlayerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7819327BCF998004E24BE /* AVPlayerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		144209BC27BBEE1B00D0341B /* The Qemists - Run You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Qemists - Run You.mp3"; sourceTree = "<group>"; };
 		1479D54127BC140F004A5D76 /* GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLayer.swift; sourceTree = "<group>"; };
 		1479D54327BC31E9004A5D76 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
+		14C7819327BCF998004E24BE /* AVPlayerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVPlayerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +66,13 @@
 		144209A527BBE3F100D0341B /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				14C7819A27BD041C004E24BE /* ViewControllers */,
+				14C7819627BD03BE004E24BE /* Storyboards */,
+				14C7819727BD03D0004E24BE /* Extensions */,
+				14C7819827BD03E1004E24BE /* Model */,
+				14C7819927BD040A004E24BE /* Resources */,
 				144209BE27BBEE2100D0341B /* Music Files */,
-				144209A627BBE3F100D0341B /* AppDelegate.swift */,
-				144209A827BBE3F100D0341B /* SceneDelegate.swift */,
-				144209AA27BBE3F100D0341B /* ViewController.swift */,
-				1479D54327BC31E9004A5D76 /* Songs.swift */,
-				144209AC27BBE3F100D0341B /* Main.storyboard */,
-				1479D54127BC140F004A5D76 /* GradientLayer.swift */,
-				144209AF27BBE3F200D0341B /* Assets.xcassets */,
-				144209B127BBE3F200D0341B /* LaunchScreen.storyboard */,
+				14C7819527BD03AB004E24BE /* Assets */,
 				144209B427BBE3F200D0341B /* Info.plist */,
 			);
 			path = MusicPlayer;
@@ -85,6 +85,57 @@
 				144209BA27BBEDD600D0341B /* Алла Пугачёва - Позови меня с собой.mp3 */,
 			);
 			path = "Music Files";
+			sourceTree = "<group>";
+		};
+		14C7819527BD03AB004E24BE /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1479D54127BC140F004A5D76 /* GradientLayer.swift */,
+				144209AF27BBE3F200D0341B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		14C7819627BD03BE004E24BE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				144209B127BBE3F200D0341B /* LaunchScreen.storyboard */,
+				144209AC27BBE3F100D0341B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		14C7819727BD03D0004E24BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14C7819327BCF998004E24BE /* AVPlayerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14C7819827BD03E1004E24BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1479D54327BC31E9004A5D76 /* Songs.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14C7819927BD040A004E24BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				144209A827BBE3F100D0341B /* SceneDelegate.swift */,
+				144209A627BBE3F100D0341B /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14C7819A27BD041C004E24BE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				144209AA27BBE3F100D0341B /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +215,7 @@
 				144209AB27BBE3F100D0341B /* ViewController.swift in Sources */,
 				1479D54227BC140F004A5D76 /* GradientLayer.swift in Sources */,
 				144209A727BBE3F100D0341B /* AppDelegate.swift in Sources */,
+				14C7819427BCF998004E24BE /* AVPlayerExtension.swift in Sources */,
 				144209A927BBE3F100D0341B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,7 +5,7 @@
 //  Created by Владислав Голосов on 15.02.2022.
 //
 
-import MediaPlayer
+import AVKit
 
 struct Song {
     var name = ""
@@ -14,3 +14,9 @@ struct Song {
                                                             ofType: "mp3")!))
     }
 }
+
+let songs = [
+    Song(name: "The Qemists - Run You"),
+    Song(name: "Алла Пугачёва - Позови меня с собой")
+    ]
+

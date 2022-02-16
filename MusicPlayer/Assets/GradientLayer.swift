@@ -9,8 +9,8 @@ import UIKit
 @IBDesignable
 
 class GradientLayer: UIView {
-    @IBInspectable var topColor: UIColor = .blue
-    @IBInspectable var bottomColor: UIColor = .green
+    @IBInspectable var topColor: UIColor = .green
+    @IBInspectable var bottomColor: UIColor = .blue
     
     var startPointX: CGFloat = 0
     var startPointY: CGFloat = 0
